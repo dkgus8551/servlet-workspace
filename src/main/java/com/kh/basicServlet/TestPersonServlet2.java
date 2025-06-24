@@ -60,29 +60,14 @@ public class TestPersonServlet2 extends HttpServlet {
 		// jsp가 화면을 만들 때 필요한 데이터들을 전달하기 위해 필요한 객체(attribute)
 		request.setAttribute("recommend", recommend);
 
-		// html 작성을 jsp에게 위임
-		// 매개변수로 요청을 위임할 jsp의 경로를 추가
+		/* html 작성을 jsp에게 위임
+		 * 매개변수로 요청을 위임할 jsp의 경로를 추가
+		 * getRequestDispatcher("jsp의 주소 || servlet의 url 패턴(/life, /firts 등, url에 붙는 주소값)")
+		 * 지정된 서블릿을 호출하여 요청 처리를 위임하고, 최초 client가 요청했던 url에는 변화가 없음
+		 * */
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/person/testPerson.jsp");
 		dispatcher.forward(request, response); // 데이터 그대로 담아서 전송
 
-//		// html
-//		response.setContentType("text/html; charset=utf-8"); // 응답 데이터의 형식
-//		PrintWriter out = response.getWriter(); // outputStream
-//		out.println("<!DOCTYPE html>");
-//		out.println("<html>");
-//		out.println("<head>");
-//		out.println("<title>개취 검사 결과</title>");
-//		out.println("</head>");
-//
-//		out.println("<body>");
-//		out.println("<h1>개인 취향조사 결과</h1>");
-//		out.println("<p>" + name + "님의 개인 취향 검사 결과는</p>");
-//		out.println("<p>" + color + "색을 좋아합니다.</p>");
-//		out.println("<p>좋아하는 동물은 " + animal + "입니다.</p>");
-//		out.println("<p>좋아하는 음식은 " + Arrays.toString(foods) + "입니다.</p>");
-//		out.println("</body>");
-//
-//		out.println("</html>");
 	}
 
 	/**
