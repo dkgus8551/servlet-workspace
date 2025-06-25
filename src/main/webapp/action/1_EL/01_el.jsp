@@ -32,9 +32,6 @@
 	
 	
 	
-	
-	
-	
 	<hr>
 	
 	<h3>2.EL을 이용해서 Scope에 저장된 값을 출력하기</h3>
@@ -61,7 +58,7 @@
 	<h3>3. EL 사용 시 내장 객체들에 저장된 키 값이 동일한 경우</h3>
 	<!-- 
 			EL은 공유 범위가 제일 작은 Scope에서부터 키값을 검색해 나감
-			pege -> request -> session -> application
+			page -> request -> session -> application
 			스코프를 지정하지 않은 경우, 위 순서대로 각 스코프에서 내가 지정한 키값을 검색하여
 			존재하는 경우 해당 키값을 화면 상에 바인딩함
 	 -->	
